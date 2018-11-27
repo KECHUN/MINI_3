@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Test_all {
+public class Test_accent {
 
 	public static void main(String[] args) throws FileNotFoundException {
 //		char x = 'ñ';

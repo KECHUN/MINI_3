@@ -48,8 +48,9 @@ public class Bigram {
 		Map<String, Double> uniMapFrench = UnigramTraining(file3,file4);
 		Map<String, Double> uniMapItalian = UnigramTrainingItalian(file5,file6);
 		Scanner input_test = new Scanner(System.in);
-		System.out.print("Enter a sentence: ");
+		System.out.println("Enter a sentence: ");
 	    String sentence = input_test.nextLine();
+	    System.out.println(sentence);
 	    UnigramClassify(sentence,uniMapEnglish, uniMapFrench,uniMapItalian);
 	    BigramClassify(sentence,biMapEnglish, biMapFrench,biMapItalian);
 	    
@@ -96,7 +97,7 @@ public class Bigram {
 		String x7 = x6.replaceAll("[ó]", "o");
 		String x8 = x7.replaceAll("[ò]", "o");
 		String x9 = x8.replaceAll("[ú]", "u");
-		String x10 = x9.replaceAll("[ù]", "e");
+		String x10 = x9.replaceAll("[ù]", "u");
 		ArrayList <String> pairs = new ArrayList<>();
 		for(int i = 0; i < 26; i++) {
 			char x = (char) ('a' + i);
@@ -137,11 +138,11 @@ public class Bigram {
 			pair_map.put(pair,prob);
 		}
 		
-		for(int i = 0; i < pairs.size(); i++) {
-			String pair = pairs.get(i);
-			double prob = pair_map.get(pair);
-			System.out.println(pair + " " + prob);
-		}
+//		for(int i = 0; i < pairs.size(); i++) {
+//			String pair = pairs.get(i);
+//			double prob = pair_map.get(pair);
+//			System.out.println(pair + " " + prob);
+//		}
 		
 		
 		return pair_map;
@@ -263,11 +264,11 @@ public class Bigram {
 				pair_map.put(pair,prob);
 			}
 			
-			for(int i = 0; i < pairs.size(); i++) {
-				String pair = pairs.get(i);
-				double prob = pair_map.get(pair);
-				System.out.println(pair + " " + prob);
-			}
+//			for(int i = 0; i < pairs.size(); i++) {
+//				String pair = pairs.get(i);
+//				double prob = pair_map.get(pair);
+//				System.out.println(pair + " " + prob);
+//			}
 			
 			
 			return pair_map;
@@ -311,7 +312,7 @@ public class Bigram {
 		String x7 = x6.replaceAll("[ó]", "o");
 		String x8 = x7.replaceAll("[ò]", "o");
 		String x9 = x8.replaceAll("[ú]", "u");
-		String x10 = x9.replaceAll("[ù]", "e");
+		String x10 = x9.replaceAll("[ù]", "u");
 		ArrayList <String> pairs = new ArrayList<>();
 		for(int i = 0; i < 26; i++) {
 			char x = (char) ('a' + i);
@@ -348,12 +349,12 @@ public class Bigram {
 			pair_map.put(pair,prob);
 		}
 		
-		for(int i = 0; i < pairs.size(); i++) {
-			String pair = pairs.get(i);
-			double prob = pair_map.get(pair);
-			System.out.println(pair + " " + prob);
-		}
-		
+//		for(int i = 0; i < pairs.size(); i++) {
+//			String pair = pairs.get(i);
+//			double prob = pair_map.get(pair);
+//			System.out.println(pair + " " + prob);
+//		}
+//		
 		
 		return pair_map;
 		
@@ -428,11 +429,11 @@ public class Bigram {
 			pair_map.put(pair,prob);
 		}
 		
-		for(int i = 0; i < pairs.size(); i++) {
-			String pair = pairs.get(i);
-			double prob = pair_map.get(pair);
-			System.out.println(pair + " " + prob);
-		}
+//		for(int i = 0; i < pairs.size(); i++) {
+//			String pair = pairs.get(i);
+//			double prob = pair_map.get(pair);
+//			System.out.println(pair + " " + prob);
+//		}
 		
 		
 		return pair_map;
